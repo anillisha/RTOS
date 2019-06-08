@@ -1,0 +1,47 @@
+/**************************************************************************//**
+ * @file     system_NUC029xEE.c
+ * @version  V3.0
+ * @brief    NUC029xEE Series CMSIS System File
+ *
+ * @note
+ * Copyright (C) 2018 Nuvoton Technology Corp. All rights reserved.
+ *
+ ******************************************************************************/
+#include <stdint.h>
+#include "NuMicro.h"
+
+
+/*----------------------------------------------------------------------------
+  Clock Variable definitions
+ *----------------------------------------------------------------------------*/
+uint32_t SystemCoreClock  = __HSI;             /*!< System Clock Frequency (Core Clock) */
+uint32_t CyclesPerUs      = (__HSI / 1000000); /* Cycles per micro second */
+uint32_t PllClock         = __HSI;             /*!< PLL Output Clock Frequency */
+uint32_t gau32ClkSrcTbl[] = {__HXT, __LXT, __HSI, __LIRC, NULL, NULL, NULL, __HIRC};
+
+
+/*----------------------------------------------------------------------------
+  Clock functions
+  This function is used to update the variable SystemCoreClock
+  and must be called whenever the core clock is changed.
+ *----------------------------------------------------------------------------*/
+void SystemCoreClockUpdate(void)             /* Get Core Clock Frequency      */
+{
+}
+
+/*---------------------------------------------------------------------------------------------------------*/
+/* Function: SystemInit                                                                                    */
+/*                                                                                                         */
+/* Parameters:                                                                                             */
+/*      None                                                                                               */
+/*                                                                                                         */
+/* Returns:                                                                                                */
+/*      None                                                                                               */
+/*                                                                                                         */
+/* Description:                                                                                            */
+/*      The necessary initializaiton of systerm.                                                           */
+/*                                                                                                         */
+/*---------------------------------------------------------------------------------------------------------*/
+void SystemInit(void)
+{
+}
